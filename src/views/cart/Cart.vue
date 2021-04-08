@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-    name:cart
+    name:'cart'
 }
 </script>
 <style lang="">

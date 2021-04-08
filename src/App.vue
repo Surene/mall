@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <router-view></router-view>
     <main-tabbar></main-tabbar>
   </div>
@@ -18,5 +18,5 @@ export default {
 }
 </script>
 <style>
-
+@import 'assets/css/normalize.css'
 </style>

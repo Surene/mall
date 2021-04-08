@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-    name:catagory
+    name:'category'
 }
 </script>
 <style lang="">
