@@ -1,4 +1,4 @@
-# surenemall
+# mall
 
 ## Project setup
 ```
