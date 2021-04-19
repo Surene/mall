@@ -1,13 +1,14 @@
 <template>
-  <div>
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <keep-alive>
+        <component :is="Component" />
+      </keep-alive>
+    </router-view>
     <main-tabbar></main-tabbar>
-  </div>
-
 </template>
 <script>
 
-import MainTabbar from './components/content/MainTabbar'
+import MainTabbar from 'components/content/maintabbar/MainTabbar'
 
 
 export default {
@@ -18,5 +19,5 @@ export default {
 }
 </script>
 <style>
-@import 'assets/css/normalize.css'
+@import 'assets/css/base.css'
 </style>

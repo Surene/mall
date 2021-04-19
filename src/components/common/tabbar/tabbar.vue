@@ -16,7 +16,7 @@ export default {
     right: 0;
     bottom: 0;
 
-    background-color: rgb(rgb(136, 128, 128), rgb(169, 175, 169), rgb(128, 128, 136));
-    box-shadow: 0 -2px 1px rgb(100,100,100,0.1);
+    background-color: #fff;
+    box-shadow: 0 -1px 1px rgb(100,100,100,.1);
   }
 </style>

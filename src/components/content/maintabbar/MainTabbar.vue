@@ -1,5 +1,4 @@
 <template>
-    <div>
         <tab-bar>
             <tabbar-item path='/home'>
                 <template  v-slot:item-icon>
@@ -47,12 +46,11 @@
             </tabbar-item>
             
         </tab-bar>
-    </div>
 </template>
 <script>
 
-import TabBar from '../common/tabbar/tabbar'
-import TabbarItem from '../common/tabbar/tabbarItem'
+import TabBar from 'components/common/tabbar/Tabbar'
+import TabbarItem from 'components/common/tabbar/TabbarItem'
 export default {
     name:'MainTabbar',
     components:{

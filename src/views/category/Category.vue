@@ -1,13 +1,11 @@
-<template lang="">
-    <div>
-        分类
-    </div>
+<template>
+    
 </template>
 <script>
 export default {
     name:'category'
 }
 </script>
-<style lang="">
+<style>
     
 </style>
