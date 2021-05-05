@@ -48,7 +48,7 @@ export default {
             click:true,
             probeType:this.probeType,
             // 当 pullUpLoad 配置为 true 的时候，插件内部使用的是默认的插件选项对象。
-            pullUpLoad:this.pullUpLoad,            
+            pullUpLoad:this.pullUpLoad,         
         })
        
     //    console.log(this.scroll);

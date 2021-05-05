@@ -3,7 +3,7 @@
         <nav-bar class="home-nav">
             <template v-slot:center-nav>
                 <div>
-                    购物街
+                    购物商城
                 </div>
             </template>
         </nav-bar>
@@ -12,7 +12,7 @@
         ref="tab1" v-show="isTabFixed" class="tab-control"></tab-control>
         <!-- 滚动bug出现原因 在图片加载完之前已经确定了scrollHeight的高度 -->
         <home-scroll class="home-content" ref="scroll" 
-        @contentScroll="showContent" :probe-type="3" @pullingUp="loadMore" :pull-up-load="true">
+        @contentScroll="showContent" :probe-type="3" @pullingUp="loadMore">
             <home-swiper :banners="banners" @swiperImageLoad="swiperImageLoad"></home-swiper>
             <home-recommend :recommends="recommends"></home-recommend>
             <home-popular></home-popular>
@@ -157,7 +157,9 @@ export default {
     },
     mounted () {
         //接受图片加载完成事件
-        const refresh = this.debounce(this.$refs.scroll.refresh,20)
+        const refresh = this.debounce(() =>{
+            this.$refs.scroll.refresh
+        },20)
         this.$eventBus.on('imageLoad',() => {
             //执行频率很高 进行防抖处理
             refresh()

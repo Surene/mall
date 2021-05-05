@@ -4,6 +4,7 @@ const Home = () => import('views/home/Home')
 const Category = () => import('views/category/Category')
 const Cart = () => import('views/cart/Cart')
 const Profile = () => import('views/profile/Profile')
+const Detail = () => import('views/detail/Detail')
 
 const routes = [
   {
@@ -34,6 +35,11 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component:Profile
+  },
+  {
+    path:'/detail',
+    // path:'/detail/:iid'
+    component:Detail
   }
 ]
 

@@ -1,4 +1,4 @@
-vue <template lang="">
+<template lang="">
     <div class="nav-bar">
         <div class="left-nav"><slot name="left-nav"></slot></div>
         <div class="center-nav"><slot name="center-nav"></slot></div>

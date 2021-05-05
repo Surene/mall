@@ -1,4 +1,4 @@
-<template lang="">
+<template>
     <div class="tabControl">
         <div v-for="(item,index) in titles" :key="item" 
         class="tabControl-item"

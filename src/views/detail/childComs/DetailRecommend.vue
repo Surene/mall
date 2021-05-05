@@ -1,43 +1,53 @@
 <template>
-    <div class="good-item" @click="itemClick">
-        <!-- <img :src="goodsItem.show.img?goodsItem.show.img:goodsItem.image" class="good-img" @load="imageLoad"> -->
-        <img :src="goodsItem.show.img" class="good-img" @load="imageLoad">
-        <div class="good-info">
-            <p class="good-title">{{goodsItem.title}}</p> 
-            <span class="good-price">￥{{goodsItem.price}}</span>
-            <span class="good-collect">{{goodsItem.cfav}}</span>    
+    <div class="recommend">
+        <div class="hot">热门推荐</div>
+        <!-- <goods-list :goods="recommend"></goods-list> -->
+        <div class="recommend-item">
+            <div v-for="item in recommend" :key="item" class="good-item">
+                <img :src="item.image" class="good-img" @load="imageLoad">
+                <div class="good-info">
+                    <p class="good-title">{{item.title}}</p> 
+                    <span class="good-price">￥{{item.price}}</span>
+                    <span class="good-collect">{{item.cfav}}</span>    
+                </div>
+            </div>
         </div>
     </div>
 </template>
+
 <script>
+
 export default {
-    name:'GoodslistItem',
+    name:'detailRecommend',
     props:{
-        goodsItem:{
-            type:Object,
+        recommend:{
+            type:Array,
             default(){
-                return {}
+                return []
             }
         }
     },
-    methods:{
+    methods: {
         imageLoad(){
-            this.$eventBus.emit('itemImageLoad')
-        },
-        itemClick(){
-            
-            // this.$router.push('/detail/'+this.goodsItem.iid)
-            // 如果路由配置中没有设置参数 则
-            const iid = this.goodsItem.iid
-            this.$router.push({path: '/detail', query: {iid}})
-            
+            this.$emit('RecommendImageLoad')
         }
-    }
-
+    },
+ 
 }
 </script>
+
 <style scoped>
-    .good-item{
+.hot{
+    padding: 10px 10px;
+    text-align: center;
+}
+.recommend-item{
+    display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 3px;
+}
+  .good-item{
         padding-bottom: 40px;
         width: 48%;
         position: relative;
@@ -83,4 +93,3 @@ export default {
     background: url("~assets/img/common/collect.svg") 0 0/14px 14px;
   }
 </style>
-
