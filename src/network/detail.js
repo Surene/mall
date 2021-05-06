@@ -19,7 +19,7 @@ export class detailItem{
     constructor(itemInfo,columns,services){
         this.title = itemInfo.title
         this.price = itemInfo.price
-        this.oldPrice = itemInfo.oldPrice
+        this.lowNowPrice = itemInfo.lowNowPrice
         this.discountBgColor = itemInfo.discountBgColor
         this.discountDesc = itemInfo.discountDesc
         this.columns = columns

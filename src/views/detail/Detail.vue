@@ -74,7 +74,7 @@ export default {
             this.iid = this.$route.query.iid
             //获取到的是详情页的全部数据 数据量非常大 所以要使用不同的对象分离数据方便处理
             getDetail(this.iid).then(res => {    
-                console.log(res);
+                // console.log(res);
                 const datas = res.data.result
                 this.topImages = datas.itemInfo.topImages
                 this.detailItem = new detailItem(datas.itemInfo,datas.columns,datas.shopInfo.services)
@@ -96,8 +96,8 @@ export default {
         // 防抖
         detailRefresh(){
             const refresh = debounce(() => {
-                this.$refs.scroll.refresh()
-            },20)
+                this.$refs.scroll && this.$refs.scroll.refresh()
+            },200)
             refresh()
         },
         // 下面三个函数为了监听图片加载完成，对页面做一次刷新（刷新可滚动高度）
@@ -162,7 +162,7 @@ export default {
             product.iid = this.iid
             product.desc = this.goodsInfo.desc
             product.title = this.detailItem.title
-            product.price = this.detailItem.price
+            product.price = this.detailItem.lowNowPrice
             product.image = this.topImages[0]
 
             // 添加到vuex中

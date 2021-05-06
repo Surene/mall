@@ -10,7 +10,7 @@ export default {
     props:{
         value:{
             type:Boolean,
-            default:true
+            default:false
         }
     },
     data() {
@@ -20,7 +20,7 @@ export default {
     },
     methods: {
         selectClick(){
-            this.$emit('checkButton',this.isChecked)
+            this.$emit('checkButton')
         }
     },
 }

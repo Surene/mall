@@ -159,7 +159,7 @@ export default {
         //接受图片加载完成事件
         const refresh = this.debounce(() =>{
             this.$refs.scroll.refresh
-        },20)
+        },50)
         this.$eventBus.on('imageLoad',() => {
             //执行频率很高 进行防抖处理
             refresh()
