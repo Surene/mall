@@ -7,6 +7,7 @@
 </template>
 <script>
 // https://better-scroll.github.io/docs/zh-CN/guide/ better-scroll参考文档
+// https://better-scroll.github.io/docs/zh-CN/FAQ/diagnosis.html bugs
 import BScroll from 'better-scroll'
 
 export default {
@@ -22,11 +23,15 @@ export default {
         // 3: 只要是滚动, 都侦测.
         probeType:{
             type:Number,
-            default:0
+            default:1
         },
         pullUpLoad:{
             type:Boolean,
             default:true
+        },
+        data:{
+            type:Array,
+            default:[]
         }
     },
     data() {
@@ -87,8 +92,20 @@ export default {
             this.scroll && this.scroll.finishPullUp()
         }
     },
+    watch: {
+        data(){
+            setTimeout(() => {
+                this.refresh
+            }, 20);
+        }
+    }
 }
 </script>
-<style>
-    
+<style scoped>
+/* .wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+} */
 </style>

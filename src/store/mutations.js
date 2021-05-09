@@ -14,6 +14,7 @@ const mutations = {
             state.itemList.push(product)
         }
     },
+    //购物车数量减一
     lessCount(state,item){
         // console.log(item.count);
         const product = state.itemList.find(cartItem => cartItem.iid === item.iid)
@@ -23,11 +24,13 @@ const mutations = {
         
 
     },
+    //购物车数量加一
     moreCount(state,item){
         const product = state.itemList.find(cartItem => cartItem.iid === item.iid)
         //可限制最大值也可以不限制
         product.count++
     },
+    //全选和不权限逻辑
     selectAllClick(state){
         let length = 0
 

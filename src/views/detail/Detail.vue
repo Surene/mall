@@ -89,6 +89,7 @@ export default {
         // 获取详情页推荐数据(全都是固定数据没什么意思，应该由大数据推送可能喜欢或者相关)
         getDetailRecommend(){
             getRecommend().then(res => {
+                // console.log(res);
                 // 不同浏览器这个位置略有不同 chrome包装了一层data edge没有
                 this.recommend = res.data.data.list
             })

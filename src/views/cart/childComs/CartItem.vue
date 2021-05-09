@@ -92,7 +92,7 @@ export default {
 .price-count .count{
     position: relative;
     right: 0px;
-    left: 70px;
+    left: 50px;
 }
 .count button{
     width: 20px;

@@ -13,7 +13,7 @@ export default {
     },
     props:{
         goods:{
-            type:Array,
+            type:Object,
             default(){
                 return []
             }

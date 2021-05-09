@@ -1,7 +1,9 @@
 const getters = {
+    //购物车列表
     getItemList(state){
         return state.itemList
     },
+    //总数量
     getCount(state){
         // return state.itemList.length  
         let lens = 0
@@ -13,6 +15,7 @@ const getters = {
         }
         return lens
     },
+    //总价格
     getTotalPrice(state){
         //简单计算
         // let totalPrice = 0
@@ -30,6 +33,7 @@ const getters = {
           return preValue + item.count * item.price
         }, 0).toFixed(2)
     },
+    //全选
     isSelectAll(state){
         let length = 0
 

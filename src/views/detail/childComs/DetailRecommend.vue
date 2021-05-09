@@ -1,6 +1,6 @@
 <template>
     <div class="recommend">
-        <div class="hot">热门推荐</div>
+        <div class="hot">为 您 推 荐</div>
         <!-- <goods-list :goods="recommend"></goods-list> -->
         <div class="recommend-item">
             <div v-for="item in recommend" :key="item" class="good-item">
@@ -38,6 +38,7 @@ export default {
 
 <style scoped>
 .hot{
+    
     padding: 10px 10px;
     text-align: center;
 }

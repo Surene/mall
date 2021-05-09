@@ -157,13 +157,13 @@ export default {
     },
     mounted () {
         //接受图片加载完成事件
-        const refresh = this.debounce(() =>{
-            this.$refs.scroll.refresh
-        },50)
-        this.$eventBus.on('imageLoad',() => {
-            //执行频率很高 进行防抖处理
-            refresh()
-        })
+        // const refresh = this.debounce(() =>{
+        //     this.$refs.scroll.refresh
+        // },50)
+        // this.$eventBus.on('imageLoad',() => {
+        //     //执行频率很高 进行防抖处理
+        //     refresh()
+        // })
     },
     activated() {
         //回到页面时 重新滚动到上次的位置

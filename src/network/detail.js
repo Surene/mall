@@ -15,6 +15,7 @@ export function getRecommend(){
     })
 }
 
+//当某个组件需要的数据从多个对象中得到时 可以通过创建类来管理数据
 export class detailItem{
     constructor(itemInfo,columns,services){
         this.title = itemInfo.title
